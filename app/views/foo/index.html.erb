@@ -1,0 +1,22 @@
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "livepipe-ui/livepipe", "livepipe-ui/window" %>
+<%= stylesheet_link_tag "modal" %>
+
+<%= @message %>
+<% if @entry.id == 0 %>
+ <%='空です' %>
+<% else %>
+ <%= @entry.id %> 
+<% end %>
+
+<%= form_for :entry do |f| %>
+  <%= f.text_field 'id' %>
+<% end %>
+
+<%= form_for :entry do |f| %>
+  <%= f.text_field :dummy_label, :readonly => true %>
+  <%= f.hidden_field :master_station_id %>
+
+  <%= modal_link_to "選択", { :action => :modal_open }, { :id => "modal_id" } %>
+  <%= modal_script :id => "modal_id" %>
+<% end %>

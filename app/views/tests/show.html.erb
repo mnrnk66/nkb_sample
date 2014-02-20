@@ -1,0 +1,11 @@
+<h1>Tests#show</h1>
+<p>Find me in app/views/tests/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<div>name:<%= @test.name %></div>
+<div>note:<%= @test.note %></div>
+
+<br />
+<%= button_to "一覧へ" , tests_path, :method => :get %>
+<%= link_to "削除", @test, method: :delete, data: { confirm: "Are you?" } %>

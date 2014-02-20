@@ -1,0 +1,6 @@
+<div style="border: 1px solid #999; margin: 0.5em; padding: 0.5em;">
+ <%- @stations.each do |station| -%>
+   <%= link_to_remote h(station.name),
+      :url => { :action => :ajax_set_station, :id => station.id } %><br />
+ <%- end -%>
+</div>

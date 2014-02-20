@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+s1:
+  id: 1
+  name: 渋谷
+s2:
+  id: 2
+  name: 中目黒
+s3:
+  id: 3
+  name: 自由が丘
+s4:
+  id: 4
+  name: 武蔵小杉
+s5:
+  id: 5
+  name: 菊名
+s6:
+  id: 6
+  name: 横浜
+

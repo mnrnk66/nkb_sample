@@ -1,0 +1,15 @@
+<div id="search_form">
+  <%- search_action = remote_function(:url => { :action => :ajax_search }, :submit => :search_form} -%>
+  キーワード:
+  <%= text_field :search, :keyword,
+     :onkeypress => "if ((event || window.event).keyCode == 13) { #{ search_action } }" %>
+  <%= link_to_remote "検索", :url => { :action => :ajax_search }, :submit => :search_form %>
+  <br />
+</div>
+
+<div id="result">
+</div>
+
+<p>
+  <a href="javascript:Control.Model.close();">閉じる</a><br />
+</p>
